@@ -157,7 +157,7 @@ nav {
     visibility: visible;
 }
 
-/* Cool animations */
+/* Cool animation (I didn't know what to call it) */
 @keyframes bar-to-times {
     0% {
         transform: rotate(0deg);
@@ -188,4 +188,63 @@ nav {
 
 .menu-icon .fa-times.active {
     animation: times-to-bar 0.5s forwards;
+}
+
+
+/* Men's Section */
+
+.image-section {
+    position: relative;
+    height: 400px; 
+    background-image: url('images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden; 
+    cursor: pointer;
+    transition: transform 0.5s ease;
+}
+
+.image-content {
+    position: relative;
+    z-index: 1; 
+    opacity: 0;
+    transform: translateY(20px); 
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.image-section:hover .image-content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.image-content h6 {
+    font-size: 18px;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.image-content h4 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.image-content p {
+    margin-bottom: 0;
+}
+
+.image-content a {
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px solid #fff;
+    transition: border-color 0.3s ease;
+}
+
+.image-content a:hover {
+    border-color: transparent;
 }

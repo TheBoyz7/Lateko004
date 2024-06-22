@@ -31,3 +31,20 @@ document.addEventListener('DOMContentLoaded', () => {
         menuIconFa.classList.remove('active');
     });
 });
+
+
+function showText() {
+    const imageContent = document.querySelector('.image-content');
+    if (imageContent) {
+        imageContent.style.opacity = '1';
+        imageContent.style.transform = 'translateY(0)';
+    }
+}
+
+function hideText() {
+    const imageContent = document.querySelector('.image-content');
+    if (imageContent) {
+        imageContent.style.opacity = '0';
+        imageContent.style.transform = 'translateY(20px)';
+    }
+}
