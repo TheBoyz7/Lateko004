@@ -48,3 +48,39 @@ function hideText() {
         imageContent.style.transform = 'translateY(20px)';
     }
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const items = document.querySelectorAll('.item');
+
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('in-view');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    items.forEach(item => {
+        observer.observe(item);
+
+        const images = JSON.parse(item.getAttribute('data-images'));
+        const period = parseInt(item.getAttribute('data-period'));
+        let currentImageIndex = 0;
+        
+        const imageContainer = item.querySelector('.image-container img');
+
+        setInterval(() => {
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            imageContainer.src = images[currentImageIndex];
+            imageContainer.style.animation = 'none';
+            setTimeout(() => imageContainer.style.animation = '', 10);
+        }, period);
+    });
+});
