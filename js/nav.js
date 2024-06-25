@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
     const menuIcon = document.querySelector('.menu-icon');
     const navCategoriesContainer = document.querySelector('.nav-categories-container');
-    const menuIconFa = document.querySelector('.menu-icon .fa');
+    const menuIconFa = document.getElementById('fa-bars');
     const overlay = document.querySelector('.overlay');
 
-    menuIcon.addEventListener('click', () => {
+    menuIconFa.addEventListener('click', () => {
         navCategoriesContainer.classList.toggle('show');
         overlay.classList.toggle('show');
 
