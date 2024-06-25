@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const images = JSON.parse(item.getAttribute('data-images'));
         const period = parseInt(item.getAttribute('data-period'));
         let currentImageIndex = 0;
-        
+
         const imageContainer = item.querySelector('.image-container img');
 
         setInterval(() => {
@@ -84,6 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }, period);
     });
 });
+
 
 
 document.addEventListener('DOMContentLoaded', () => {
