@@ -187,11 +187,11 @@ nav {
     }
 }
 
-.menu-icon .fa-bars.active {
+ .fa-bars.active {
     animation: bar-to-times 0.5s forwards;
 }
 
-.menu-icon .fa-times.active {
+ .fa-times.active {
     animation: times-to-bar 0.5s forwards;
 }
 
