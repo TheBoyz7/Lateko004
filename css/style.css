@@ -402,6 +402,10 @@ nav {
 
 /* Women section  */
 
+.image-section.stationary.women-image-section{
+    background-image: url(../images/WOMEN_LV_BUNDLE_HP_2162024_DI3.webp);
+}
+
 
 .learn-more.women-learn-more {
     color: #ff69b4;
